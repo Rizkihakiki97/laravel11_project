@@ -37,3 +37,4 @@ Route::post('store-bagi', [KalkulatorController::class, 'storeBagi'])->name('sto
 
 Route::resource('user', UsersController::class);
 Route::get('delete/{id}', [UsersController::class, 'delete'])->name('delete');
+Route::get('delete/{id}', [UsersController::class, 'delete'])->name('delete');
