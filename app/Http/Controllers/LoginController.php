@@ -9,7 +9,7 @@ class LoginController extends Controller
 {
     public function index()
     {
-        return view('layout.app');
+        return view('login');
     }
     public function actionLogin(Request $request)
     {
@@ -20,5 +20,10 @@ class LoginController extends Controller
         } else {
             return back()->withErrors(['email' => 'Mohon periksa kembali email dan password anda!'])->withInput();
         }
+    }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->to('/');
     }
 }
